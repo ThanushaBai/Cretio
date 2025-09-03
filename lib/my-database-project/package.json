@@ -1,0 +1,12 @@
+my-database-project
+├── lib
+│   ├── utils.ts
+│   └── db.js
+├── src
+│   ├── models
+│   │   └── index.js
+│   └── config
+│       └── database.js
+├── .env
+├── package.json
+└── README.md

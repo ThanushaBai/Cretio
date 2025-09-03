@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 346.8 77.2% 49.8%; /* Original pink primary */
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 346.8 77.2% 49.8%;
+    --radius: 0.5rem;
+
+    --chart-1: 215 100% 50%;
+    --chart-2: 40 100% 50%;
+    --chart-3: 140 100% 50%;
+    --color-revenue: hsl(215, 100%, 50%);
+    --color-expenses: hsl(40, 100%, 50%);
+    --color-profit: hsl(140, 100%, 50%);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 346.8 77.2% 49.8%; /* Original pink primary */
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 346.8 77.2% 49.8%;
+
+    /* Dark theme chart colors with better contrast */
+    --chart-1: 215 100% 70%;
+    --chart-2: 40 100% 70%;
+    --chart-3: 140 100% 70%;
+    --color-revenue: hsl(215, 100%, 70%);
+    --color-expenses: hsl(40, 100%, 70%);
+    --color-profit: hsl(140, 100%, 70%);
+  }
+}
+
+/* Simple white background */
+body {
+  background-color: white;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Density settings */
+.density-compact table th,
+.density-compact table td {
+  @apply py-2 px-3;
+}
+
+.density-compact .card-header {
+  @apply pb-2 pt-4 px-4;
+}
+
+.density-compact .card-content {
+  @apply p-4;
+}
+
+.density-compact .input,
+.density-compact .select,
+.density-compact .button:not(.button-sm) {
+  @apply h-8 px-3 text-sm;
+}
+
+.density-compact .form-item {
+  @apply gap-1.5;
+}
+
+.density-compact .tabs-content {
+  @apply pt-2;
+}
+
+/* Animation settings */
+.reduce-animations * {
+  transition-duration: 0.01ms !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+}
